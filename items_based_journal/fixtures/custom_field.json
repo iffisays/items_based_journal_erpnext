@@ -1,16 +1,18 @@
 [
   {
     "doctype": "Custom Field",
+    "name": "Item-default_journal_account",
     "dt": "Item",
     "fieldname": "default_journal_account",
     "fieldtype": "Link",
     "options": "Account",
     "label": "Default Journal Account",
-    "insert_after": "item_group",
+    "insert_after": "item_defaults",
     "description": "Default account to use when this item is selected in Journal Entry"
   },
   {
     "doctype": "Custom Field",
+    "name": "Journal Entry Account-custom_item",
     "dt": "Journal Entry Account",
     "fieldname": "custom_item",
     "fieldtype": "Link",
