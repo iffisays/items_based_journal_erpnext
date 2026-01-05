@@ -1,0 +1,9 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+include license.txt
+recursive-include items_based_journal *.json
+recursive-include items_based_journal *.py

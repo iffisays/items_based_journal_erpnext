@@ -1,0 +1,10 @@
+[
+  {
+    "doctype": "Client Script",
+    "name": "JE Item to Account Auto-Fill",
+    "dt": "Journal Entry",
+    "view": "Form",
+    "enabled": 1,
+    "script": "frappe.ui.form.on(\"Journal Entry Account\", {\n    custom_item: function(frm, cdt, cdn) {\n        var row = locals[cdt][cdn];\n        if (row.custom_item) {\n            frappe.db.get_value(\"Item\", row.custom_item, \"default_journal_account\", function(r) {\n                if (r && r.default_journal_account) {\n                    frappe.model.set_value(cdt, cdn, \"account\", r.default_journal_account);\n                }\n            });\n        }\n    }\n});"
+  }
+]

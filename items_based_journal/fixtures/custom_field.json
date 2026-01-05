@@ -1,0 +1,25 @@
+[
+  {
+    "doctype": "Custom Field",
+    "dt": "Item",
+    "fieldname": "default_journal_account",
+    "fieldtype": "Link",
+    "options": "Account",
+    "label": "Default Journal Account",
+    "insert_after": "item_group",
+    "description": "Default account to use when this item is selected in Journal Entry"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Journal Entry Account",
+    "fieldname": "custom_item",
+    "fieldtype": "Link",
+    "options": "Item",
+    "label": "Item",
+    "insert_after": "",
+    "in_list_view": 1,
+    "in_standard_filter": 1,
+    "columns": 2,
+    "description": "Select item to auto-fill account"
+  }
+]
