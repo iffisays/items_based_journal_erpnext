@@ -38,6 +38,32 @@ bench --site your-site clear-cache
 - **Item-wise Journal Entries**: View all journal entries by item with filters for date range and company
 - **Item Ledger**: View running balance for a specific item across all journal entries
 
+## Troubleshooting
+
+### Error: "App items_based_journal not in apps.txt"
+
+If you get this error when running `install-app`, manually add the app to apps.txt:
+
+```bash
+echo "items_based_journal" >> sites/apps.txt
+```
+
+Then retry the install:
+
+```bash
+bench --site your-site install-app items_based_journal
+```
+
+### Error: Build failed during get-app
+
+Make sure you're using the `--skip-assets` flag:
+
+```bash
+bench get-app https://github.com/iffisays/items_based_journal_erpnext --skip-assets
+```
+
+This app has no frontend assets, so the build step must be skipped.
+
 ## License
 
 MIT
