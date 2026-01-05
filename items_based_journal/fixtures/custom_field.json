@@ -8,7 +8,8 @@
     "options": "Account",
     "label": "Default Journal Account",
     "insert_after": "item_defaults",
-    "description": "Default account to use when this item is selected in Journal Entry"
+    "description": "Default account to use when this item is selected in Journal Entry",
+    "link_filters": "[[\"Account\", \"is_group\", \"=\", 0]]"
   },
   {
     "doctype": "Custom Field",
